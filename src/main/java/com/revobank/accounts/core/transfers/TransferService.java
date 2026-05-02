@@ -1,6 +1,5 @@
 package com.revobank.accounts.core.transfers;
 
-import com.revobank.accounts.core.accounts.Account;
 import com.revobank.accounts.core.accounts.AccountNotFoundException;
 import com.revobank.accounts.repositories.accounts.AccountEntity;
 import com.revobank.accounts.repositories.accounts.AccountRepository;
@@ -35,6 +34,9 @@ public class TransferService {
         BigDecimal availableAmountBeneficiary = beneficiaryAccountEntity.getAvailableAmount();
 
         TransferStrategy transferStrategy = strategies.get(transfer.getType());
+        if (transferStrategy == null) {
+            throw new NotExistPaymentTypeException("Transfer type not found");
+        }
         BigDecimal calculatedAvailableAmountFrom = transferStrategy.executeFromCalculation(availableAmountFrom, transfer.getAmount());
         BigDecimal calculatedAvailableAmountBeneficient = transferStrategy.executeBeneficientCalculation(availableAmountBeneficiary, transfer.getAmount());
 

@@ -8,7 +8,6 @@ class AccountsApplicationTests extends BaseIntegrationTest {
 
     @Test
     void contextLoads() {
-        System.out.println();
     }
 
 }
