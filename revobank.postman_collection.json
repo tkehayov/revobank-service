@@ -13,7 +13,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"name\": \"Ivan\",\n    \"iban\": \"BG12STSA93000012245612\"\n}",
+          "raw": "{\n    \"name\": \"Peter\",\n    \"iban\": \"BG12STSA33000012245612\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -41,7 +41,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"fromAccountId\":2,\n    \"beneficiaryId\":1,\n    \"amount\":\"5\",\n    \"type\":\"Credit\"\n}",
+          "raw": "{\n    \"fromAccountId\":2,\n    \"beneficiaryId\":1,\n    \"amount\":\"4\",\n    \"type\":\"Debit\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -101,12 +101,12 @@
       "response": []
     },
     {
-      "name": "http://localhost:8080/transfers/12",
+      "name": "http://localhost:8080/transfers/1",
       "request": {
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:8080/transfers/12",
+          "raw": "http://localhost:8080/transfers/1",
           "protocol": "http",
           "host": [
             "localhost"
@@ -114,14 +114,14 @@
           "port": "8080",
           "path": [
             "transfers",
-            "12"
+            "1"
           ]
         }
       },
       "response": []
     },
     {
-      "name": "http://localhost:8080/accounts/status/14",
+      "name": "http://localhost:8080/accounts/status/1",
       "request": {
         "method": "PUT",
         "header": [],
@@ -135,7 +135,7 @@
           }
         },
         "url": {
-          "raw": "http://localhost:8080/accounts/status/14",
+          "raw": "http://localhost:8080/accounts/status/1",
           "protocol": "http",
           "host": [
             "localhost"
@@ -144,19 +144,19 @@
           "path": [
             "accounts",
             "status",
-            "14"
+            "1"
           ]
         }
       },
       "response": []
     },
     {
-      "name": "http://localhost:8080/accounts/14",
+      "name": "http://localhost:8080/accounts/1",
       "request": {
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:8080/accounts/14",
+          "raw": "http://localhost:8080/accounts/1",
           "protocol": "http",
           "host": [
             "localhost"
@@ -164,7 +164,7 @@
           "port": "8080",
           "path": [
             "accounts",
-            "14"
+            "1"
           ]
         }
       },
