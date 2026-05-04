@@ -66,6 +66,4 @@ public class AccountController {
 
         return ResponseEntity.ok().build();
     }
-
-
 }
